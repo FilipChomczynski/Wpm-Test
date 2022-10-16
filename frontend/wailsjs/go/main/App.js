@@ -5,3 +5,11 @@
 export function FetchWord() {
   return window['go']['main']['App']['FetchWord']();
 }
+
+export function GetData() {
+  return window['go']['main']['App']['GetData']();
+}
+
+export function SaveResult(arg1, arg2) {
+  return window['go']['main']['App']['SaveResult'](arg1, arg2);
+}

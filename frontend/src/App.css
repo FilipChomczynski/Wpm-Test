@@ -1,5 +1,5 @@
-#info h1 {
-  font-size: 30pt;
+#info p {
+  font-size: 26pt;
 }
 
 #result {
@@ -7,7 +7,7 @@
   
 }
 
-#result h1 {
+#result p {
   display: inline-block;
   margin-left: 3%;
 } 
@@ -44,5 +44,13 @@
   opacity: 0.4;
   width: 100%;
   height: 10%;
-  }
+}
 
+#personal-record {
+  text-align: left;
+  position: absolute;
+  left: 2%;
+  bottom: 2%;
+
+  font-size: 15pt;
+}
