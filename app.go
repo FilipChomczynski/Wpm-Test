@@ -2,8 +2,6 @@ package main
 
 import (
 	"context"
-	"encoding/json"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -43,8 +41,5 @@ func (a *App) FetchWord() string {
 		log.Fatal(err)
 	}
 
-	var resp Response
-	json.Unmarshal(responseData, &resp)
-	fmt.Println(string(responseData))
 	return string(responseData)
 }
