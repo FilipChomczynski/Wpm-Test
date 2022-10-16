@@ -9,10 +9,6 @@ import (
 	"github.com/tjarratt/babble"
 )
 
-type Response struct {
-	Word string
-}
-
 type Data struct {
 	Wpm  float32 `json:"wpm"`
 	Awpm float32 `json:"awpm"`
