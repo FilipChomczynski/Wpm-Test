@@ -1,0 +1,12 @@
+{
+  "name": "wpm-test",
+  "outputfilename": "wpm-test",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "Filip Chomczynski",
+    "email": "f.chomczynski@gmail.com"
+  }
+}

@@ -1,0 +1,20 @@
+html {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+body {
+    margin: 0;
+    font-family: "Lato"
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjx4wXg.woff2") format("woff2");
+}
+
+#app {
+    height: 100vh;
+    text-align: center;
+}
