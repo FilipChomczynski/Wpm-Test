@@ -1,19 +1,30 @@
-# README
+# WPM Test
 
 ## About
 
-This is the official Wails React template.
+WPM Test is a simple desktop app that let you check your wpm (typing speed - words per minute), 
+buit in [Wails](https://wails.io/) (golang) and [React](https://en.reactjs.org/) on frontend.
+***
+<img src="screenshots/Screenshot_1.png" alt="drawing" width="450"/>
+<img src="screenshots/Screenshot_2.png" alt="drawing" width="450"/>
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+<br/>
 
-## Live Development
+## Requirements:
+1. [Go](https://go.dev/)
+2. [Wails](https://wails.io/)
+3. [Node](https://nodejs.org/en/)
 
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
+<br/>
 
-## Building
+### Run:
 
-To build a redistributable, production mode package, use `wails build`.
+```
+wails dev 
+```
+
+### Build:
+
+```
+wails build
+```
