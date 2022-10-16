@@ -76,7 +76,7 @@ function App() {
     }
 
     function fetchWord() {
-        FetchWord().then(res => setWord(res.slice(2, -2).split('')));
+        FetchWord().then(res => setWord(res.split('')));
         setWordCount(count => count + 1);
     }
 

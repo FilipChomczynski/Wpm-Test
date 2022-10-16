@@ -2,9 +2,8 @@ package main
 
 import (
 	"context"
-	"io"
-	"log"
-	"net/http"
+
+	"github.com/tjarratt/babble"
 )
 
 type Response struct {
@@ -28,18 +27,7 @@ func (a *App) startup(ctx context.Context) {
 }
 
 func (a *App) FetchWord() string {
-	var url string = "https://random-word-api.herokuapp.com/word"
-	response, err := http.Get(url)
-
-	if err != nil {
-		log.Fatal(err)
-		return ""
-	}
-
-	responseData, err := io.ReadAll(response.Body)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	return string(responseData)
+	babbler := babble.NewBabbler()
+	babbler.Count = 1
+	return babbler.Babble()
 }
