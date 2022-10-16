@@ -5,8 +5,8 @@
 WPM Test is a simple desktop app that let you check your wpm (typing speed - words per minute), 
 buit in [Wails](https://wails.io/) (golang) and [React](https://en.reactjs.org/) on frontend.
 ***
-<img src="screenshots/Screenshot_1.png" alt="drawing" width="450"/>
-<img src="screenshots/Screenshot_2.png" alt="drawing" width="450"/>
+<img src="screenshots/Screenshot_1.png" alt="drawing" width="600"/>
+<img src="screenshots/Screenshot_2.png" alt="drawing" width="600"/>
 
 <br/>
 
