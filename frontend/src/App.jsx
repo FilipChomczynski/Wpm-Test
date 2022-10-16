@@ -13,23 +13,21 @@ function App() {
     const [correct, setCorrect] = useState(0)
     const [timeCounter, setTimeCounter] = useState();
     const [correctPr, setCorrectPr] = useState();
-
+    const [pouse, setPouse] = useState(false)
     let counter = null;
-    let pouse = false
+    const [time_, setTime_] = useState(0)
+    
     useEffect(() => {
         window.addEventListener('keydown', e=>{
-            // pouse = false
-            console.log(pouse);
             if (counter == null) {
                 console.log("towrze");
                 counter = setInterval(() => {
-                    if (!pouse) {
+                    if (pouse == false) {
                         setTime(t => t + 1)
-                        
+                        console.log("dodaje");
                     }
                 }, 1000);
             }
-            // setTimeCounter(counter)
 
             setLetter(letter => letter + 1)
             setClicked(e.key)
@@ -41,8 +39,7 @@ function App() {
     useEffect(() => {
         if (wordsCount >=10) {
             setCorrectPr(Math.round(100 - mistakes/(correct + mistakes) * 100));
-            pouse = true
-
+            setTime_(time);
             window.addEventListener('keydown', reset)
         }
     }, [wordsCount])
@@ -75,6 +72,7 @@ function App() {
         setMistakes(0);
         setTime(0);
         setCorrectPr(0);
+        setPouse(true)
         window.removeEventListener('keydown', reset)
     }
 
@@ -97,14 +95,9 @@ function App() {
                 <h1 id='header'>WPM test</h1>
                 <p>Write 10 words as fast as you can to get your result.</p>
                 <br />
-                <h1>{correct}</h1>
-                <h1>{mistakes}</h1>
-                <h1>{time}</h1>
-                <h1>{wordsCount}</h1>
-                <h1>{correctPr}</h1>
                 <div id='result'>
-                    <h1>{wordsCount >= 10 ? 'WPM: ' + (((correct + mistakes)/5) / (time / 60)).toString().slice(0, 5): ''}</h1>
-                    <h1>{wordsCount >= 10 ? 'AWPM: ' + ((((correct + mistakes)/5) / (time / 60)) / (correctPr * 0.01)).toString().slice(0, 4): ''}</h1>
+                    <h1>{wordsCount >= 10 ? 'WPM: ' + (((correct + mistakes)/5) / (time_ / 60)).toString().slice(0, 5): ''}</h1>
+                    <h1>{wordsCount >= 10 ? 'AWPM: ' + ((((correct + mistakes)/5) / (time_ / 60)) / (correctPr * 0.01)).toString().slice(0, 4): ''}</h1>
                     <h1>{wordsCount >= 10 ? 'Correct: ' + correctPr + "%": ''}</h1>
                 </div>
 
